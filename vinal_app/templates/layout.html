@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palenke Kiosk</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<!-- Inside layout.html -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">𝑷𝒂𝒍𝒆𝒏𝒌𝒆 𝑲𝒊𝒐𝒔𝒌</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">𝐇𝐨𝐦𝐞</a>
+                <a class="nav-link" href="/orders">𝐎𝐫𝐝𝐞𝐫𝐬</a>
+                <span>      </span> <!-- Placeholder -->
+                <div class="text-end mt-3">
+                    <h5>𝐓𝐨𝐭𝐚𝐥 𝐂𝐨𝐬𝐭: <span id="totalCost">0</span> Pesos</h5>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
